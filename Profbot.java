@@ -1,3 +1,7 @@
+//Main file for Probot
+//Authors: Jonathan D'Alonzo & Stephen Canzanese
+//Rowan University Artifical Intelligence Semester Project
+
 package profbot.Profbot;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
