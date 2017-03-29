@@ -19,6 +19,7 @@ public class Directory {
         admissions.setEmail("admissions@rowan.edu");
         admissions.setPhoneNum("5555555");
         admissions.setHours("9am-5pm");
+        return admissions;
         
     }
     
