@@ -95,24 +95,38 @@ public class PBController extends JFrame {
                          * deciding of what to say.
                          */
                         
-                        //fix this crap up!!!
+                        //fix this up!!!
                         ////////////////////////////////////////////////////////////////////////////////////////
                         ////////////////////////////////////////////
                         ////////////////////////////////////////////
                         String[] sentenceMatches = findMatches(uText.split("\\b+"));
                         String line = "";
                         for (int l = 0; l < sentenceMatches.length; l++) {
+                            //if find matches didn't send back a null value
                             if (sentenceMatches[l] != null)
+                                //add each line into one string
                                 line += sentenceMatches[l] + " "; 
                         }
                         boolean searching = true;
                         for (String key : responsesMap.keySet()) {
+                            //The literal string was a test. I could not sort
+                            //the sentenceMatches in the time I had, but I still
+                            //wanted to see if it worked.
                             if (key.contains("what, myers, email")) {
+                                //retrieve and say the response that correlates
+                                //to the specific key (or matching keywords)
                                 botSay(responsesMap.get(key));
+                                //searching is done, therefore stop
                                 searching = false;
                             }
                         }
+                        //if still searching after looking through the
+                        //whole list
                         if (searching) {
+                            //We can create a database of default answer
+                            //and randomly select from them each time.
+                            //Or just give them this one because it may
+                            //help better.
                             botSay("I apologize, but I do not understand. "
                                     + "Please ask the question again"
                                     + "in a different way, ask me a new question"
