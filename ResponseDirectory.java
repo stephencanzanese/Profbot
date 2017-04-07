@@ -8,9 +8,6 @@ import java.util.HashMap;
 
 public class ResponseDirectory {
 
-	//private HashMap<String, String> keyRespPairs;
-        //private HashMap<String, String> keywords;
-        
         public HashMap<String, String> loadFileIntoMap(String file) {
             BufferedReader bread = null;
             FileReader fread = null;
@@ -20,14 +17,16 @@ public class ResponseDirectory {
                 String sCurrentLine;
                 bread = new BufferedReader(new FileReader(file));
                 while ((sCurrentLine = bread.readLine()) != null) {
-                    String[] parts = sCurrentLine.split(":");//splits the line at :
-                    String key = parts[0];
-                    String resp = parts[1];				
+                    if (!sCurrentLine.contains("//")) {
+                        String[] parts = sCurrentLine.split(":");//splits the line at :
+                        String key = parts[0];
+                        String resp = parts[1];				
 
-                    map.put(key, resp);//adds the key/repsonse pair to the map
+                        map.put(key, resp);//adds the key/repsonse pair to the map
 
-                    //System.out.println(response);
-                    //System.out.println(keyPairing);
+                        //System.out.println(response);
+                        //System.out.println(keyPairing);
+                    }
                 }
                 return map;
             } catch (IOException e) {

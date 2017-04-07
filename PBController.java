@@ -34,7 +34,7 @@ public class PBController extends JFrame {
         ResponseDirectory rd = new ResponseDirectory();
         keywordArray = rd.loadFileIntoArray("resources/keywords.txt");
         responsesMap = rd.loadFileIntoMap("resources/responses.txt");
-        printArray(keywordArray);
+        //printArray(keywordArray);
         printMap(responsesMap);
         startChatLoop();
         
@@ -81,25 +81,23 @@ public class PBController extends JFrame {
         //txtEnter Attributes:
         txtEnter.setLocation(2, 540);
         txtEnter.setSize(590, 30);
+        botSay("Hello, my name is Probot. How may I help you on this wonderful day?");
 
         //txtEnter Action Event:
         txtEnter.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent arg0) {
-                        String uText = txtEnter.getText().toLowerCase().trim();
+                        String uText = txtEnter.getText().trim();
                         txtEnter.setText("");
                         txtChat.append("You: " + uText + "\n");
-                        
+                        uText = uText.toLowerCase();
                         /**
                          * This is the section where we can call a method
                          * which will take care of the parsing and the
                          * deciding of what to say.
                          */
                         
-                        //fix this up!!!
-                        ////////////////////////////////////////////////////////////////////////////////////////
                         ////////////////////////////////////////////
-                        ////////////////////////////////////////////
-                        String[] sentenceMatches = findMatches(uText.split("\\b+"));
+                        String[] sentenceMatches = findMatches(uText.toLowerCase().split("\\b+"));
                         String line = "";
                         for (int l = 0; l < sentenceMatches.length; l++) {
                             //if find matches didn't send back a null value
@@ -107,12 +105,14 @@ public class PBController extends JFrame {
                                 //add each line into one string
                                 line += sentenceMatches[l] + " "; 
                         }
+                        /////Test Print
+                        System.out.println("\nLine is: " + line);
                         boolean searching = true;
                         for (String key : responsesMap.keySet()) {
                             //The literal string was a test. I could not sort
                             //the sentenceMatches in the time I had, but I still
                             //wanted to see if it worked.
-                            if (key.contains("what, myers, email")) {
+                            if (key.equals(line)) {
                                 //retrieve and say the response that correlates
                                 //to the specific key (or matching keywords)
                                 botSay(responsesMap.get(key));
@@ -163,12 +163,6 @@ public class PBController extends JFrame {
                 }
             }
         }
-        //Arrays.sort(matches);
-        //print array of matches for testing
-        for (String match : matches) {
-            System.out.print(match + " ");
-        }
-        ///////////////////////////////////
         return matches;
     }
     
@@ -185,6 +179,24 @@ public class PBController extends JFrame {
         for (String aValue : a) {
             System.out.print(aValue + " ");
         }
+    }
+    
+    public String[] sortArray(String[] array)
+    {
+        for (int i = 0; i < array.length - 1; ++i) {
+          int minIndex = i;
+          for (int j = i + 1; j < array.length; ++j) {
+            // "<" changed to use of compareTo()
+            if (array[j].compareTo(array[minIndex]) < 0) {
+              minIndex = j;
+            }
+          }
+          // int changed to String
+          String temp = array[i];
+          array[i] = array[minIndex];
+          array[minIndex] = temp;
+        }
+        return array;
     }
 
     public static void main(String[] args){
