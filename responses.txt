@@ -1,0 +1,10 @@
+//Any line containing “//“ will not be read in, but will be ignored
+//Formatting for this txt file is as followed: 
+//each keyword must be in the order it would be found in a sentence with only one space
+//between the keywords. The last keyword of the line must be followed by a space
+//and then a colon and the sentence Profbot will then respond with.
+//Such as: “what myers email : Professor Myers email is myersjac@rowan.edu.”
+what myers email : Professor Myers email is myersjac@rowan.edu.
+what chien email : Professor Chien’s email is chien@rowan.edu.
+what hnatyshin email : Computer Science chairman’s email is hnatyshin@rowan.edu.
+myers email : Professor Myers email is myersjac@rowan.edu.
