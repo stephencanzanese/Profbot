@@ -1,0 +1,16 @@
+//GUIDELINES FOR ADDING KEYWORDS
+//MUST: Nothing before first keyword on a line.
+//	Every keyword must be separated by “, “ NOTHING ELSE!
+//	Every line must end with “, “ and no spaces after!
+//	The last keyword must have no spaces or anything else after it.
+//Any additional comments must being with Java’s commenting notation
+myers, chien, hnatyshin, xu, 
+schillo, poolos, coughlin, baliga, 
+breitzman, chu, haddad, ho, hristescu, 
+bergmann, kay, lobo, mansaray, mckee, provine, 
+robinson, shahzad, tinkham, weissman, 
+who, what, where, when, why, how, 
+tutoring, help, acm, acmw, internship, 
+job, research, news, events, contest, email, contact, 
+difference, ba, bs, minor, prerequisites, prereqs, 
+prereq, guide, schedule, specializations
