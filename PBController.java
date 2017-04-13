@@ -97,7 +97,9 @@ public class PBController extends JFrame {
                          */
                         
                         ////////////////////////////////////////////
-                        String[] sentenceMatches = findMatches(uText.toLowerCase().split("\\b+"));
+                        String[] sentenceMatches = sortArray(findMatches(uText.toLowerCase().split("\\b+")));
+                        System.out.print("HERE IS SENTENCEMATCHES: ");
+                        printArray(sentenceMatches);
                         String line = "";
                         for (int l = 0; l < sentenceMatches.length; l++) {
                             //if find matches didn't send back a null value
@@ -145,7 +147,32 @@ public class PBController extends JFrame {
         this.add(txtEnter);
         this.add(txtChat);
     }
-
+    /**
+     * The result is a negative integer if this String object lexicographically 
+     * precedes the argument string. The result is a positive integer if this 
+     * String object lexicographically follows the argument string. The result 
+     * is zero if the strings are equal;
+     * @param arr
+     * @return 
+     */
+    public static String[] sortArray(String[] arr){
+         
+        for (int i = 0; i < arr.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++)
+                if (arr[j] != null) {
+                    if (arr[j].compareToIgnoreCase(arr[index]) < 0) {
+                        index = j;
+                    }
+                }
+            String smallerNumber = arr[index]; 
+            arr[index] = arr[i];
+            arr[i] = smallerNumber;
+        }
+        return arr;
+    }
+    
     public String[] findMatches(String[] sentence) {
         //the ten MUST be changed.. will throw index out of bound if
         //101 matches were found!!
@@ -179,24 +206,6 @@ public class PBController extends JFrame {
         for (String aValue : a) {
             System.out.print(aValue + " ");
         }
-    }
-    
-    public String[] sortArray(String[] array)
-    {
-        for (int i = 0; i < array.length - 1; ++i) {
-          int minIndex = i;
-          for (int j = i + 1; j < array.length; ++j) {
-            // "<" changed to use of compareTo()
-            if (array[j].compareTo(array[minIndex]) < 0) {
-              minIndex = j;
-            }
-          }
-          // int changed to String
-          String temp = array[i];
-          array[i] = array[minIndex];
-          array[minIndex] = temp;
-        }
-        return array;
     }
 
     public static void main(String[] args){
