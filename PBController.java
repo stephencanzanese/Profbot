@@ -1,8 +1,4 @@
 package profbot.Profbot;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
@@ -20,133 +16,15 @@ public class PBController extends JFrame {
     //Brain
     String[] keywordArray = new String[]{""};
     HashMap<String, String> responsesMap = new HashMap<String, String>();
-//    String[] keywords;
-//    String[] sixWs;
-//    String[] professors;
-//    String[] emails;
     
-    //Typing Area:
-    private JTextField txtEnter = new JTextField();
-    //Chat Area:
-    private JTextArea txtChat = new JTextArea();
-
     public PBController() {
         ResponseDirectory rd = new ResponseDirectory();
         keywordArray = rd.loadFileIntoArray("resources/keywords.txt");
         responsesMap = rd.loadFileIntoMap("resources/responses.txt");
-        //printArray(keywordArray);
         printMap(responsesMap);
-        startChatLoop();
         
-        //Brain's Attributes:
-//        professors = new String[]{"myers", "chien", "hnatyshin", "xu",
-//                                  "schillo","poolos", "coughlin", "baliga",
-//                                  "breitzman", "chu", "haddad", "ho", "hristescu",
-//                                  "bergmann", "kay", "lobo", "mansaray", "mckee",
-//                                  "provine", 
-//                                  "myers", "robinson", "shahzad", "tinkham", "weissman"
-//        };     
-//        emails = new String[]{    "myersjac@rowan.edu", "chien@rowan.edu",
-//                                  "hnatyshin@rowan.edu", "xu@rowan.edu",
-//                                  "schillo@rowan.edu","Poolos24@rowan.edu",
-//                                  "coughlin@rowan.edu","baliga@rowan.edu",
-//                                  "breitzman@rowan.edu", "chum@rowan.edu",
-//                                  "haddada@rowan.edu", "hos@rowan.edu",
-//                                  "hristescu@rowan.edu", "bergmann@rowan.edu",
-//                                  "kay@rowan.edu", "lobo@rowan.edu",
-//                                  "mansaray@rowan.edu", "mckeep82@rowan.edu", "kilroy@elvis.rowan.edu", "robinsonj@rowan.edu", "shahzad@rowan.edu", "nlt@elvis.rowan.edu", "weissmans@rowan.edu"
-//        };
-//                                  
-//        sixWs = new String[]{"who", "what", "where", "when", "why", "how"};
-//        keywords = new String[]{"tutoring", "professor", "help", "acm", "acmw", "internship",
-//                                "job", "research", "news", "events", "contest", "email", "contact",
-//                                "difference", "ba", "bs", "minor", "prerequisites", "prereqs",
-//                                "prereq", "guide", "schedule", "specializations"}; 
-    }
-
-    public void botSay(String s) {
-        txtChat.append("Profbot: " + s + "\n");
     }
     
-    public void startChatLoop() {
-        //Frame Attributes:
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(600, 600);
-        this.setVisible(true);
-        this.setResizable(false);
-        this.setLayout(null);
-        this.setTitle("Java AI");
-        txtEnter.setBackground(java.awt.Color.yellow);
-
-        //txtEnter Attributes:
-        txtEnter.setLocation(2, 540);
-        txtEnter.setSize(590, 30);
-        botSay("Hello, my name is Probot. How may I help you on this wonderful day?");
-
-        //txtEnter Action Event:
-        txtEnter.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent arg0) {
-                        String uText = txtEnter.getText().trim();
-                        txtEnter.setText("");
-                        txtChat.append("You: " + uText + "\n");
-                        uText = uText.toLowerCase();
-                        /**
-                         * This is the section where we can call a method
-                         * which will take care of the parsing and the
-                         * deciding of what to say.
-                         */
-                        
-                        ////////////////////////////////////////////
-                        String[] sentenceMatches = sortArray(findMatches(uText.toLowerCase().split("\\b+")));
-                        System.out.print("HERE IS SENTENCEMATCHES: ");
-                        printArray(sentenceMatches);
-                        String line = "";
-                        for (int l = 0; l < sentenceMatches.length; l++) {
-                            //if find matches didn't send back a null value
-                            if (sentenceMatches[l] != null)
-                                //add each line into one string
-                                line += sentenceMatches[l] + " "; 
-                        }
-                        /////Test Print
-                        System.out.println("\nLine is: " + line);
-                        boolean searching = true;
-                        for (String key : responsesMap.keySet()) {
-                            //The literal string was a test. I could not sort
-                            //the sentenceMatches in the time I had, but I still
-                            //wanted to see if it worked.
-                            if (key.equals(line)) {
-                                //retrieve and say the response that correlates
-                                //to the specific key (or matching keywords)
-                                botSay(responsesMap.get(key));
-                                //searching is done, therefore stop
-                                searching = false;
-                            }
-                        }
-                        //if still searching after looking through the
-                        //whole list
-                        if (searching) {
-                            //We can create a database of default answer
-                            //and randomly select from them each time.
-                            //Or just give them this one because it may
-                            //help better.
-                            botSay("I apologize, but I do not understand. "
-                                    + "Please ask the question again"
-                                    + "in a different way, ask me a new question"
-                                    + "or say 'help'. ");
-                        }
-                        //////////////////////////////////////////////////
-                }
-        });
-
-        //txtChat Attributes:
-        txtChat.setLocation(15, 5);
-        txtChat.setSize(560, 510);
-        txtChat.setEditable(false);
-
-        //Add Items To Frame:
-        this.add(txtEnter);
-        this.add(txtChat);
-    }
     /**
      * The result is a negative integer if this String object lexicographically 
      * precedes the argument string. The result is a positive integer if this 
@@ -207,9 +85,13 @@ public class PBController extends JFrame {
             System.out.print(aValue + " ");
         }
     }
-
-    public static void main(String[] args){
-        new PBController();
+    
+    public String[] getKeywordArray() {
+        return keywordArray;
+    }
+    
+    public HashMap<String, String> getResponsesMap() {
+        return responsesMap;
     }
     
 }

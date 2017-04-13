@@ -22,10 +22,7 @@ public class ResponseDirectory {
                         String key = parts[0];
                         String resp = parts[1];				
 
-                        map.put(key, resp);//adds the key/repsonse pair to the map
-
-                        //System.out.println(response);
-                        //System.out.println(keyPairing);
+                        map.put(key, resp); //adds the key/repsonse pair to the map
                     }
                 }
                 return map;
