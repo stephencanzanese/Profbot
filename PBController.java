@@ -19,8 +19,8 @@ public class PBController extends JFrame {
     
     public PBController() {
         ResponseDirectory rd = new ResponseDirectory();
-        keywordArray = rd.loadFileIntoArray("resources/keywords.txt");
-        responsesMap = rd.loadFileIntoMap("resources/responses.txt");
+        keywordArray = rd.loadFileIntoArray("src/profbot/Profbot/keywords.txt");
+        responsesMap = rd.loadFileIntoMap("src/profbot/Profbot/responses.txt");
         printMap(responsesMap);
         
     }

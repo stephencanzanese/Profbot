@@ -93,6 +93,7 @@ public class ChatGUI extends javax.swing.JFrame {
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jTextArea1.addComponentListener(new java.awt.event.ComponentAdapter() {

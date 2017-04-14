@@ -4,7 +4,28 @@
 //between the keywords. The last keyword of the line must be followed by a space
 //and then a colon and the sentence Profbot will then respond with.
 //Such as: “what myers email : Professor Myers email is myersjac@rowan.edu.”
-what myers email : Professor Myers email is myersjac@rowan.edu.
-what chien email : Professor Chien’s email is chien@rowan.edu.
-what hnatyshin email : Computer Science chairman’s email is hnatyshin@rowan.edu.
-myers email : Professor Myers email is myersjac@rowan.edu.
+email myers what : Professor Myers email is myersjac@rowan.edu.
+chien email what : Professor Chien’s email is chien@rowan.edu.
+email hnatyshin what : Computer Science chairman’s email is hnatyshin@rowan.edu.
+email myers : Professor Myers email is myersjac@rowan.edu.
+email xu what : Professor  email is  .
+email schillo what : Professor  email is  .
+email poolos what : Professor  email is  .
+emailcoughlin what : Professor  email is  .
+email baliga what : Dr.  email is  .
+email breitzman what : Professor  email is  .
+email chu what : Professor  email is  .
+email haddad what : Professor  email is  .
+email ho what : Dr.  email is  .
+email hristescu what : Dr.  email is  .
+email bergman what : Professor  email is  .
+email kay what : Professor  email is  .
+email lobo what : Dr.  email is  .
+email mansaray what : Professor  email is  .
+email mckee what : Professor  email is  .
+email provine what : Professor  email is  .
+email robinson what : Professor  email is  .
+email shahzad what : Professor  email is  .
+email tinkham what : Dr.  email is  .
+email weissman what : Professor  email is  .
+Hello : 
