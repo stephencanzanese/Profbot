@@ -13,4 +13,5 @@ who, what, where, when, why, how,
 tutoring, help, acm, acmw, internship, 
 job, research, news, events, contest, email, contact, 
 difference, ba, bs, minor, prerequisites, prereqs, 
-prereq, guide, schedule, specializations
+prereq, guide, schedule, specializations, financial, are,
+you, 
