@@ -49,5 +49,6 @@ office robinson where : Dr. Robinson's office is at Robinson 330D.
 office shahzad where : Dr. Shahzad's office is at Robinson 328G.
 office tinkham where : Dr. Tinkham's office is at Robinson 330I.
 office weissman where : Professor Weissman's office is at Robinson 330H.
-test
+head masters who : The head of the Masters Program is Dr. Hristescu.
+academic programs what : The Computer Science department has several programs. A Bachelors of Arts in Computing and Informatics. A bachelors of Science in Computer Science. We offer a minor in Computer Science. An acelerated B.S/M.S in Computer Science. A Masters of Science in Computer Science. A Masters of Science in Data Analytics.
 Hello : 
