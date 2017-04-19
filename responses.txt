@@ -8,24 +8,46 @@ email myers what : Professor Myers email is myersjac@rowan.edu.
 chien email what : Professor Chien’s email is chien@rowan.edu.
 email hnatyshin what : Computer Science chairman’s email is hnatyshin@rowan.edu.
 email myers : Professor Myers email is myersjac@rowan.edu.
-email xu what : Professor  email is  .
-email schillo what : Professor  email is  .
-email poolos what : Professor  email is  .
-emailcoughlin what : Professor  email is  .
-email baliga what : Dr.  email is  .
-email breitzman what : Professor  email is  .
-email chu what : Professor  email is  .
-email haddad what : Professor  email is  .
-email ho what : Dr.  email is  .
-email hristescu what : Dr.  email is  .
-email bergman what : Professor  email is  .
-email kay what : Professor  email is  .
-email lobo what : Dr.  email is  .
-email mansaray what : Professor  email is  .
-email mckee what : Professor  email is  .
-email provine what : Professor  email is  .
-email robinson what : Professor  email is  .
-email shahzad what : Professor  email is  .
-email tinkham what : Dr.  email is  .
-email weissman what : Professor  email is  .
+email what xu : Dr. Xu's email is xu@rowan.edu.
+email schillo what : Mr. Schillo's email is schillo@rowan.edu.
+email poolos what : Ms. Poolos' email is poolos24@rowan.edu.
+coughlin email what : Mrs. Coughlin's  email is coughlin@rowan.edu.
+baliga email what : Dr. Baliga's email is baliga@rowan.edu.
+breitzman email what : Dr. Breitzman's email is breitzman@rowan.edu.
+bergmann email what : Dr. Bergmann's email is bergman@rowan.edu.
+chu email what : Professor Chu's email is chum@rowan.edu.
+email haddad what : Professor Haddad's email is haddada@rowan.edu.
+email ho what : Dr. Ho's email is hos@rowan.edu.
+email hristescu what : Dr. Hristescu's email is hristescu@rowan.edu.
+email kay what : Dr. Kay's email is kay@rowan.edu.
+email lobo what : Dr. Lobo's email is lobo@rowan.edu.
+email mansaray what : Professor Mansaray's email is mansaray@rowan.edu.
+email mckee what : Professor Mckee's email is mckeep82@rowan.edu.
+email provine what : Professor Provine's email is kilroy@elvis.rowan.edu.
+email robinson what : Dr. Robinson's email is robinsonj@rowan.edu.
+email shahzad what : Dr. Shahzad's email is shahzad@rowan.edu.
+email tinkham what : Dr. Tinkham's email is nlt@elvis.rowan.edu.
+email weissman what : Professor Weissman's email is weissmans@rowan.edu.
+hnatyshin office where : Dr. Hnatyshin's office is at Robinson 330H.
+office where xu : Dr. Xu's office is at Robinson 330L.
+office schillo where : Mr. Schillo's office is at Robinson 330B.
+office poolos where : Ms. Poolos office is at Robinson 328O.
+coughlin office where : Mrs. Coughlin can be found at Robinson 330H.
+baliga office where : Dr. Baliga's office is at Robinson 328T.
+bergmann office where : Dr. Bergmann's office is at Robinson 330C.
+chien office where : Professor Chien's office is at Robinson 330G.
+chu office where : Professor Chu's office is at Robinson 330M.
+haddad office where : Professor Haddad's office is at Robinson 330K.
+ho office where : Dr. Ho's office is at Robinson 328Q.
+hristescu office where : Dr. Hristescu's office is at Robinson 330E.
+lobo office where : Dr. Lobo's office is at Robnson 328R
+mansaray office where : Dr. Mansaray's office is at Robinson 330M.
+mckee office where : Professor Mckee's office is at Robinson 330K.
+myers office where : Professor Myers' office is at Robinson 330F.
+provine office where : Professor Provine's office is at Robinson 330J.
+office robinson where : Dr. Robinson's office is at Robinson 330D.
+office shahzad where : Dr. Shahzad's office is at Robinson 328G.
+office tinkham where : Dr. Tinkham's office is at Robinson 330I.
+office weissman where : Professor Weissman's office is at Robinson 330H.
+test
 Hello : 
